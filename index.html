@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread & Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Miniver&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@200&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+</head>
+<body> 
+    <header>
+        <nav data-aos="fade-right" class="navbar">
+            <div class="logo">
+                <h1>Thread & Bloom</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li class="dropdown-parent">
+                    <a href="#" class="dropdown-toggle">Shop ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Single product</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hamburger" data-tooltip="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-icons">
+                <a href="#" data-tooltip="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" data-tooltip="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" data-tooltip="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </ul>
+        </nav>
+        <div data-aos="zoom-out" class="hero">
+            <div class="headings">
+                <h1>Timeless Style</h1>
+                <p>Discover fashion that blends comfort with sophistication. At <b>Thread & Bloom</b>, every piece is
+                    crafted to bring confidence, charm, and elegance to your wardrobe. From everyday essentials to
+                    statement
+                    outfits, we design collections that let you look and feel your best—always.</p>
+            </div>
+            <div data-aos="fade-up" class="hero-container">
+                <div class="hero-content">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-1.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Bold in Bloom</h3>
+                                    <p>Add a touch of vibrant charm to your look. Because confidence is always in style.
+                                    </p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-2.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Effortless Layers</h3>
+                                    <p>Cool, chic, and made for the everyday. Layer up in effortless elegance.</p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-3.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Golden Details</h3>
+                                    <p>It’s the small details that make the biggest statement. Shine in style.</p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-4.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Cozy Elegance</h3>
+                                    <p>Stay warm, stay stylish. Comfort never looked this good.</p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-5.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Casual Vibes</h3>
+                                    <p>Easy fits, effortless smiles—your everyday wardrobe redefined.</p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide">
+                                <img src="Images/hero-6.jpg" alt="">
+                                <div class="slide-content">
+                                    <h3>Bloom in Style</h3>
+                                    <p>Light, fresh, and timeless. Dresses that feel like a breath of spring.</p>
+                                    <a href="#" class="btn">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section data-aos="zoom-in" class="service wrapper">
+            <div class="service-container">
+                <div class="service-item">
+                    <a href="#"><i class="fa-solid fa-calendar"></i></a>
+                    <h4>Easy Appointments</h4>
+                    <p>Schedule a personal styling session and shop with expert guidance, tailored just for you.</p>
+                </div>
+                <div class="service-item">
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <h4>Store Pickup</h4>
+                    <p>Order online and collect your favorites directly from our store—fast, simple, convenient.</p>
+                </div>
+                <div class="service-item">
+                    <a href="#"><i class="fa-solid fa-gift"></i></a>
+                    <h4>Gift Packaging</h4>
+                    <p>Beautifully wrapped and ready to delight. Make every purchase extra special with our packaging.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <a href="#"><i class="fa-solid fa-arrows-spin"></i></a>
+                    <h4>Easy Returns</h4>
+                    <p>Shop with confidence—enjoy hassle-free global returns and exchanges, completely free of charge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-right" class="collection-container wrapper">
+            <div class="collections">
+                <div class="collection-item">
+                    <img src="Images/collection-1.jpg" alt="">
+                    <h4>Shop for men</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="Images/collection-2.jpg" alt="">
+                    <h4>Shop for women</h4>
+                </div>
+                <div class="collection-item">
+                    <img src="Images/collection-3.jpg" alt="">
+                    <h4>Shop accessories</h4>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-left" class="product-section arrivals wrapper">
+            <div class="section-heading">
+                <h2>New Arrivals</h2>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="swiper arrivalsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/arrival-1.jpg" alt="Floral Summer Dress" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Floral Summer Dress</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$65.00</p>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="card swiper-slide product-slide">
+                        <div class="image-box">
+                            <img src="Images/arrival-2.jpg" alt="Casual White Shirt" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Casual White Shirt</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$45.00</p>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="card swiper-slide product-slide">
+                        <div class="image-box">
+                            <img src="Images/arrival-3.jpg" alt="Denim Jacket" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Denim Jacket</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$80.00</p>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="card swiper-slide product-slide">
+                        <div class="image-box">
+                            <img src="Images/arrival-4.jpg" alt="Classic Handbag" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Classic Handbag</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$95.00</p>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="card swiper-slide product-slide">
+                        <div class="image-box">
+                            <img src="Images/arrival-5.jpg" alt="Trendy Sneakers" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Trendy Sneakers</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$70.00</p>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="feature-collection">
+            <div class="feature-container wrapper">
+                <div class="feature-image">
+                    <img src="Images/feature-1.jpg" alt="Winter Collection Outfit">
+                </div>
+                <div class="feature-content">
+                    <h2>Winter Essentials</h2>
+                    <p>Stay warm and stylish this season with our curated winter collection. From cozy knits to classic
+                        coats, discover timeless pieces made to keep you comfortable in every moment. Each piece is
+                        designed with premium fabrics that blend comfort and durability. Whether you’re layering up
+                        for chilly mornings or dressing for a night out, our collection ensures you never compromise
+                        on style. Make this winter your most fashionable one yet.</p>
+                    <a href="#" class="btn1">Shop Collection</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section data-aos="flip-up" class="product-section selling-item wrapper">
+            <div class="section-heading">
+                <h2>Top Picks</h2>
+                <a href="#" class="btn">View All Products</a>
+            </div>
+            <div class="swiper sellingSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-1.jpg" alt="Cozy Knit Sweater" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Cozy Knit Sweater</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$50.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-2.jpg" alt="Classic Denim Jacket" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Classic Denim Jacket</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$60.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-3.jpg" alt="Winter Wool Scarf" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Winter Wool Scarf</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$45.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-4.jpg" alt="Leather Handbag" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Leather Handbag</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$70.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-5.jpg" alt="Stylish Ankle Boots" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Stylish Ankle Boots</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$80.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/selling-6.jpg" alt="Casual Cotton Hoodie" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Casual Cotton Hoodie</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$55.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section data-aos="zoom-out-up" class="classic-collection">
+            <div class="collection-banner wrapper">
+                <img src="Images/banner-1.jpg" alt="Classic Collection Banner">
+
+                <!-- Circle Text -->
+                <div class="circle-text">
+                    <svg viewBox="0 0 300 300">
+                        <defs>
+                            <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+                        </defs>
+                        <text dy="5" textLength="750">
+                            <textPath href="#circlePath" startOffset="0%">
+                                Timeless Style • Classic Collection 2025 •
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- Play Button -->
+                <div class="play-button" id="playVideoBtn"><i class="fa-solid fa-play"></i></div>
+            </div>
+            <div class="video-modal" id="videoModal">
+                <div class="video-content">
+                    <span class="close-btn" id="closeModal">&times;</span>
+                    <video id="promoVideo" controls width="640" height="360" poster="Images/banner-preview.png">
+                        <source src="Images/banner-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <h2 class="testimonial-heading">Customer Reviews</h2>
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <p>“The winter coat I bought is so warm and stylish. I’ve worn it almost every day and still get
+                            compliments. The material feels premium, and the stitching is flawless. Definitely worth
+                            every
+                            penny.”</p>
+                        <span>URBAN VIBE</span>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <p>“Fast delivery and amazing packaging. The t-shirt feels soft and breathable — perfect for
+                            daily wear. It keeps its shape even after multiple washes. I’ll be ordering more colors
+                            soon!”</p>
+                        <span>TRENDY STREET</span>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <p>“Great fit and super comfortable jeans. I finally found a brand that balances fashion and
+                            comfort. They pair well with almost everything I own, and the quality feels durable. A
+                            must-have
+                            for denim lovers.”</p>
+                        <span>DENIM EDGE</span>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <p>“I love the new arrivals section! The designs are fresh and unique, definitely my go-to store
+                            now. Every collection feels carefully curated. Shopping here makes me excited to try new
+                            styles.”</p>
+                        <span>STYLE AVENUE</span>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <p>“The sneakers are light, durable, and match almost everything in my wardrobe. Totally worth
+                            the price! They feel comfortable even during long walks. I’ve already recommended them to my
+                            friends.”</p>
+                        <span>STEP UP</span>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <p>“Such a smooth shopping experience. The fabric quality is excellent, and the sizes are just
+                            perfect. Customer support was quick to answer my queries, which made me trust the brand even
+                            more.”</p>
+                        <span>MODERN WEAR</span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section data-aos="zoom-in-up" class="product-section product-suggestion wrapper">
+            <div class="section-heading">
+                <h2>You May Also Like</h2>
+                <a href="#" class="btn">View all products</a>
+            </div>
+            <div class="swiper productSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/product-1.jpg" alt="Classic Denim Jacket" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Classic Denim Jacket</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$65.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/product-2.jpg" alt="Striped Casual Shirt" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Striped Casual Shirt</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$40.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/product-3.jpg" alt="Slim Fit Jeans" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Slim Fit Jeans</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$55.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/product-4.jpg" alt="Winter Hoodie" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">Winter Hoodie</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$70.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="Images/product-5.jpg" alt="White Sneakers" />
+                            <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        </div>
+                        <h4 class="product-title">White Sneakers</h4>
+                        <div class="product-wrapper">
+                            <p class="product-price">$80.00</p>
+                            <p class="add-to-cart">Add to cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="brands">
+            <h2 class="brands-title">Our Partners & Trusted Brands</h2>
+            <div class="brands-images">
+                <!-- <img src="Images/logo-1" alt="Brand Logo 1"> -->
+                <img src="Images/logo-2.png" alt="Brand Logo 2">
+                <img src="Images/logo-3.png" alt="Brand Logo 3">
+                <img src="Images/logo-4.png" alt="Brand Logo 4">
+                <img src="Images/logo-5.png" alt="Brand Logo 5">
+                <!-- Duplicate logos for smooth infinite scrolling -->
+                <!-- <img src="Images/logo-1.png" alt="Brand Logo 1"> -->
+                <img src="Images/logo-2.png" alt="Brand Logo 2">
+                <img src="Images/logo-3.png" alt="Brand Logo 3">
+                <img src="Images/logo-4.png" alt="Brand Logo 4">
+                <img src="Images/logo-5.png" alt="Brand Logo 5">
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="overlay">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates, exclusive offers, and style inspiration delivered straight to your inbox.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button class="btn1">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="zoom-out-up" class="instagram-feed">
+            <div class="insta-content">
+                <div class="insta-images">
+                    <img src="Images/insta-1.jpg" alt="">
+                    <img src="Images/insta-2.jpg" alt="">
+                    <img src="Images/insta-3.jpg" alt="">
+                    <img src="Images/insta-4.jpg" alt="">
+                    <img src="Images/insta-5.jpg" alt="">
+                    <img src="Images/insta-6.jpg" alt="">
+                </div>
+                <a href="#" target="_blank" class="btn1">Explore More on Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container wrapper">
+            <!-- Col-1 -->
+            <div class="footer-col">
+                <h2 class="logo">Thread & Bloom</h2>
+                <p>At Thread & Bloom, we bring you timeless styles with modern comfort. From casual wear to premium
+                    outfits, our mission is to make fashion effortless and sustainable.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!-- Col-2 -->
+            <div class="footer-col">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">About</a></li>
+                    <li><a href="#" class="footer-link">Services</a></li>
+                    <li><a href="#" class="footer-link">Single Item</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Col-3 -->
+            <div class="footer-col">
+                <h4>Help & Info</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Track Your Order</a></li>
+                    <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                    <li><a href="#" class="footer-link">Shipping Info</a></li>
+                    <li><a href="#" class="footer-link">Size Guide</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Customer Support</a></li>
+                </ul>
+            </div>
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Have questions or suggestions?<br>
+                    <a href="mailto:contact@threadbloom.com" class="footer-link"
+                        style="text-transform: none;">contact@threadbloom.com</a>
+                </p>
+                <p>Need support? Call us.<br>
+                    <a href="tel:+43720115278" class="footer-link">+43 720 11 52 78</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-left-content">
+                <p>We ship with:
+                    <img src="Images/footer-1" alt="Post">
+                    <img src="Images/footer-2" alt="DHL">
+                </p>
+                <p>Payment Option:
+                    <img src="Images/footer-3" alt="Visa">
+                    <img src="Images/footer-4.png" alt="PayPal">
+                    <img src="Images/footer-5.png" alt="MasterCard">
+                </p>
+            </div>
+            <div class="footer-right-content">
+                <p>© Copyright 2025 Thread & Bloom. All rights reserved. Design by <a href="#">TemplatesJungle</a></p>
+                <p>Crafted with ❤️ by <a href="#">Avni Sharma</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,     
+            once: true       
+        });
+    </script>
+</body>
+</html>
