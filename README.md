@@ -36,7 +36,7 @@ thread-and-bloom/
 │── Images/  
 
 ## Live Demo
-(Add your GitHub Pages link here)
+(https://Avnisharma15.github.io/Thread---Bloom---Fashion-Website)
 
 ## Author
 Created by **Avni Sharma** ✨
