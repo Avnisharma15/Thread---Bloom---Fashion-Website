@@ -29,6 +29,7 @@ header {
 }
 
 .navbar {
+    z-index: 10000;
     position: relative;
     display: flex;
     align-items: center;
@@ -106,7 +107,8 @@ header {
 
 .dropdown {
     position: absolute;
-    top: 36px;
+    /* top: 36px; */
+    top: 100%;
     left: 0;
     background: #fff;
     list-style: none;
@@ -1053,7 +1055,7 @@ header {
 @media screen and (max-width: 768px) {
     .dropdown {
         top: 0;
-        left: -175px;
+        left: -180px;
         color: black;
         border-radius: 10px;
         text-align: center;
@@ -1070,7 +1072,7 @@ header {
         z-index: 99999;
         position: absolute;
         top: -500px;
-        left: 83%;
+        left: 80%;
         transform: translateX(-50%);
         width: 18rem;
         padding: 0.5rem 0;
@@ -1182,6 +1184,96 @@ header {
     }
 }
 
-@media screen and (max-width: 360px) {
-    /* Mobile view is pending */
+/* ===== PHONE VIEW (below 600px) ===== */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 12px 12px;
+        z-index: 999;
+    }
+
+    /* Logo smaller */
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+        font-size: 22px;
+    }
+
+    /* Hide desktop nav */
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 12px 0;
+        z-index: 1000;
+    }
+
+    /* When opened */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Nav items full width */
+    .nav-links li {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    /* Links appearance */
+    .nav-links a {
+        font-size: 16px;
+        padding: 6px 0;
+    }
+
+    /* Dropdown becomes simple list */
+    .dropdown {
+        position: static !important;
+        max-height: none !important;
+        opacity: 1 !important;
+        padding-left: 18px;
+        box-shadow: none;
+    }
+
+    /* Hero text */
+    .hero-section h1,
+    .hero h1 {
+        font-size: 26px;
+        line-height: 1.1;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero-section p,
+    .hero p {
+        font-size: 15px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* Buttons center */
+    .hero-btns {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+
+    /* Set images responsive */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Container padding smaller */
+    .wrapper {
+        padding: 0 1rem;
+    }
 }
